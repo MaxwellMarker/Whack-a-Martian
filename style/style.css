@@ -1,0 +1,11 @@
+body{
+    width: 100%;
+    height: 100vh;
+    border: solid 2px black;
+    margin: 0 auto;
+}
+.full-screen {
+    width: 100%;
+    height: 100%;
+    background-color: rgb(106, 93, 231);
+}
