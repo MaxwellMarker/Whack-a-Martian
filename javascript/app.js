@@ -9,13 +9,11 @@ $(()=>{
         setTimeout( function () {$(event.currentTarget).on('click', clickTarget);}, 600);
     }
     const $clickTarget = () =>{
-        $('button').on('click', clickTarget)
+        $('.target').on('click', clickTarget)
     } 
     $clickTarget()
 })
-const randomNumber = (maxNum) =>{
 
-}
 const revealTarget = () => {
     const idNum = (Math.floor(Math.random()*3));
     $(`#${targetIds[idNum]}`).css('transform', 'translate(0, 0)')

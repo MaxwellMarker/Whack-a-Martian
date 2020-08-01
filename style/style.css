@@ -2,12 +2,77 @@ body{
     margin: 0 auto;
     background-color: rgb(150, 150, 150);
 }
-.full-screen {
+button {
+    outline: none;
 }
-.game-window {
+.fullScreen {
+    display: flex;
+    justify-content: center;
+    border: solid 1px red;
+}
+#buttonContainer {
     display: flex;
     flex-direction: column;
-    margin: 75px auto;
+    justify-content: space-around;
+    align-items: center;
+    margin: 75px 0;
+    width: 200px;
+    border: solid 1px red;
+}
+.sideContainer {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.sideButton {
+    font-size: 30px;
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    box-shadow: 10px 15px 15px 1px rgba(0, 0, 0, .7);
+    transition: .5s;
+}
+.sideButton:active {
+    height: 140px;
+    width: 140px;
+    font-size: 28px;
+}
+#startButton {
+    color: rgb(255, 157, 157);
+    background-image: radial-gradient(rgb(54, 13, 13), rgb(117, 43, 43));
+    border: solid 5px rgb(109, 42, 42);
+}
+#infoButton {
+    color: rgb(131, 143, 255);
+    background-image: radial-gradient(rgb(12, 11, 83),rgb(42, 32, 179));
+    border: solid 5px rgb(40, 41, 99);
+}
+#startButton:active {
+    background-image: radial-gradient(rgb(209, 8, 8),rgb(138, 50, 50));
+    box-shadow: 0 0 30px 0 red;
+    border: solid 4px rgb(138, 50, 50);
+}
+#infoButton:active {
+    background-image: radial-gradient(rgb(25, 36, 196),rgb(51, 50, 138));
+    box-shadow: 0 0 30px 0 blue;
+    border: solid 5px rgb(44, 45, 112);
+}
+#leaderboardContainer{
+    margin: 75px 0;
+    width: 200px;
+    border: solid 1px red;
+}
+ol {
+    font-size: 10px;
+}
+.gameWindow {
+    display: flex;
+    flex-direction: column;
+    margin: 75px 0;
     width: 1100px;
     height: 600px;
     background-color: rgb(5, 0, 32);

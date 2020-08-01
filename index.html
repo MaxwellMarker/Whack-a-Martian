@@ -12,8 +12,16 @@
 </head>
 
 <body>
-    <div class="full-screen">
-        <div class="game-window">
+    <div class="fullScreen">
+        <div id="buttonContainer">
+            <div class="sideContainer">
+                <button class="sideButton" id="startButton">LAUNCH</button>
+            </div>
+            <div class="sideContainer">
+                <button class="sideButton" id="infoButton">INFO</button>
+            </div>
+        </div>
+        <div class="gameWindow">
             <div id="backgroundSpace">
                 <h2>SCORE: <span id="scoreCount"></span></h2>
             </div>
@@ -25,6 +33,21 @@
                 <button class="target front" id="r1t3"></button>
             </div>
             <div class="row" id="row1"></div>
+        </div>
+        <div id="leaderboardContainer">
+            <ol>
+                <h2>TOP WHACKERS</h2>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ol>
         </div>
     </div>
 </body>
