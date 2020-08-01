@@ -50,6 +50,7 @@ body{
 .front {
     width: 120px;
     height: 120px;
+    transform: translate(0, 125px);
     transition: transform .6s;
     background-image: linear-gradient(green,rgb(0, 78, 0))
 }
