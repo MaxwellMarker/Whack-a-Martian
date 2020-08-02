@@ -1,29 +1,44 @@
 let scoreCount = 0;
 const targetIds = [
-    r1t1 = {
-        id: 'r1t1',
-        startPosition: 'translate(0, 125px)',
-        endPosition: 'translate(0, 0)'
+    type1num1 = {
+        id: 'type1num1',
+        startPosition: 'translate(-15px, 125px) rotate(12deg)',
+        endPosition: 'translate(15px, -30px) rotate(12deg)'
     },
-    r1t2 = {
-        id: 'r1t2',
-        startPosition: 'translate(0, 125px)',
-        endPosition: 'translate(0, 0)'
+    type1num2 = {
+        id: 'type1num2',
+        startPosition: 'translate(0, 125px) rotate(2deg)',
+        endPosition: 'translate(0, 0) rotate(2deg)'
     },
-    r1t3 = {
-        id: 'r1t3',
-        startPosition: 'translate(0, 125px) rotate(-10deg)',
-        endPosition: 'translate(-20px, 0px) rotate(-10deg)'
+    type1num3 = {
+        id: 'type1num3',
+        startPosition: 'translate(0, 125px) rotate(-2deg)',
+        endPosition: 'translate(0, 0) rotate(-2deg)'
     },
-    r2t1 = {
-        id: 'r2t1',
-        startPosition: 'translate(0, 125px)',
-        endPosition: 'translate(0, 0)'
+    type1num4 = {
+        id: 'type1num4',
+        startPosition: 'translate(15px, 125px) rotate(-12deg)',
+        endPosition: 'translate(-15px, -30px) rotate(-12deg)'
     },
-    r2t2 = {
-        id: 'r2t2',
-        startPosition: 'translate(0, 125px) rotate(-10deg)',
-        endPosition: 'translate(-20px, 0px) rotate(-10deg)'
+    type1num5 = {
+        id: 'type1num5',
+        startPosition: 'translate(-25px, 125px) rotate(15deg)',
+        endPosition: 'translate(25px, -40px) rotate(15deg)'
+    },
+    type1num6 = {
+        id: 'type1num6',
+        startPosition: 'translate(0, 125px) rotate(1deg)',
+        endPosition: 'translate(0, 0) rotate(1deg)'
+    },
+    type1num7 = {
+        id: 'type1num7',
+        startPosition: 'translate(0, 125px) rotate(-1deg)',
+        endPosition: 'translate(0, 0) rotate(-1deg)'
+    },
+    type1num8 = {
+        id: 'type1num8',
+        startPosition: 'translate(25px, 125px) rotate(-15deg)',
+        endPosition: 'translate(-25px, -40px) rotate(-15deg)'
     }
 ];
 // const targetIdArrays = {
@@ -56,7 +71,7 @@ const revealTarget = () => {
     $(`#${target.id}`).css('transform', target.endPosition)
     setTimeout(() => {
         $(`#${target.id}`).css('transform', target.startPosition)
-    }, 1200);
+    }, 1500);
 }
 
-setInterval(revealTarget, 2000);
+setInterval(revealTarget, 1000);

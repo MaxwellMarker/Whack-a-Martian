@@ -1,6 +1,7 @@
 body{
     margin: 0 auto;
     background-color: rgb(150, 150, 150);
+    font-family: Arial, Helvetica, sans-serif;
 }
 button {
     outline: none;
@@ -103,7 +104,7 @@ ol {
     right: -200px;
     width: 1400px;
     height: 1400px;
-    background-image: linear-gradient(black,white,black,white,black,white, black);
+    background-image: linear-gradient(black,rgb(51, 2, 51),black,rgb(5, 5, 80),black,rgb(61, 6, 6),black);
     animation-name: spin;
     animation-timing-function: linear;
     animation-iteration-count: infinite;
@@ -140,40 +141,44 @@ ol {
     z-index: 0;
     box-shadow: 0 0 20px 5px black inset;
 }
-#r1t1 {
+#scoreDisplay {
+    position: absolute;
+    left: 5px;
+    bottom: 5px;
+    color: black;
+}
+.type1 {
     width: 80px;
     height: 120px;
-    transform: translate(0, 125px);
     transition: transform .6s;
     background-image: linear-gradient(green,rgb(0, 78, 0))
+}
+.type2 {
+    width: 60px;
+    height: 100px;
+    transition: transform .6s;
+    background-color: orange;
+}
+.type3 {
+    width: 50px;
+    height: 90px;
+    transition: transform .6s;
+    background-color: red;
+}
+#r1t1 {
+    transform: translate(0, 125px);
 }
 #r1t2 {
-    width: 80px;
-    height: 120px;
     transform: translate(0, 125px);
-    transition: transform .6s;
-    background-image: linear-gradient(green,rgb(0, 78, 0))
 }
 #r1t3 {
-    width: 80px;
-    height: 120px;
     transform: translate(50px, 125px) rotate(-20deg);
-    transition: transform .6s;
-    background-image: linear-gradient(green,rgb(0, 78, 0))
 }
 #r2t1 {
-    width: 80px;
-    height: 120px;
     transform: translate(0, 125px);
-    transition: transform .6s;
-    background-image: linear-gradient(green,rgb(0, 78, 0))
 }
 #r2t2 {
-    width: 80px;
-    height: 120px;
     transform: translate(50px, 125px) rotate(-20deg);
-    transition: transform .6s;
-    background-image: linear-gradient(green,rgb(0, 78, 0))
 }
 h2 {
     margin: 5px;
