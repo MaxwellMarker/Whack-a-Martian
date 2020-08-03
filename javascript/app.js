@@ -9,13 +9,13 @@ const targetIdsType1 = [
     type1num2 = {
         id: 'type1num2',
         startPosition: 'translate(-10px, 125px) rotate(3deg)',
-        endPosition: 'translate(0, 0) rotate(3deg)',
+        endPosition: 'translate(0, 5px) rotate(3deg)',
         pointValue: 1
     },
     type1num3 = {
         id: 'type1num3',
         startPosition: 'translate(10px, 125px) rotate(-3deg)',
-        endPosition: 'translate(0, 0) rotate(-3deg)',
+        endPosition: 'translate(0, 5px) rotate(-3deg)',
         pointValue: 1
     },
     type1num4 = {
