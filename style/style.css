@@ -9,9 +9,11 @@ button {
     outline: none;
     border: none;
 }
+
 button:hover {
     cursor: crosshair;
 }
+
 .fullScreen {
     display: flex;
     justify-content: center;
@@ -28,7 +30,7 @@ button:hover {
         0 40px 0 -20px rgb(85, 85, 85);
 }
 
-#buttonContainer {
+#leftContainer {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -38,9 +40,9 @@ button:hover {
     min-width: 175px;
 }
 
-.sideContainer {
-    width: 150px;
-    height: 150px;
+.buttonContainer {
+    width: 125px;
+    height: 125px;
     border-radius: 50%;
     background-color: black;
     display: flex;
@@ -49,18 +51,18 @@ button:hover {
 }
 
 .sideButton {
-    font-size: 30px;
-    height: 150px;
-    width: 150px;
+    font-size: 25px;
+    height: 125px;
+    width: 125px;
     border-radius: 50%;
     box-shadow: 10px 15px 15px 1px rgba(0, 0, 0, .7);
     transition: .5s;
 }
 
 .sideButton:active {
-    height: 135px;
-    width: 135px;
-    font-size: 27px;
+    height: 110px;
+    width: 110px;
+    font-size: 22px;
 }
 
 #startButton {
@@ -87,6 +89,7 @@ button:hover {
     border: solid 5px rgb(44, 45, 112);
 }
 
+/* styling for leaderboard */
 #leaderboardContainer {
     margin: 10px 0;
     width: 200px;
@@ -96,6 +99,7 @@ ol {
     font-size: 10px;
 }
 
+/* styling related to game window and everthing inside it */
 .gameWindow {
     display: flex;
     flex-direction: column;
@@ -125,8 +129,7 @@ ol {
     align-items: center;
     top: -325px;
     left: 200px;
-    transform: rotate(180deg);
-    /* animation-name: spin; */
+    animation-name: spin;
     animation-timing-function: linear;
     animation-iteration-count: infinite;
     animation-direction: reverse;
@@ -142,10 +145,6 @@ ol {
     height: 400px;
     z-index: 4;
     border-radius: 50%;
-    border-bottom: solid 1px white;
-    border-top: solid 1px white;
-    border-left: solid 1px black;
-    border-right: solid 1px black;
     /* background-image: linear-gradient(red, blue, green); */
     background-color: black;
 }
@@ -230,7 +229,7 @@ ol {
     background-image: url(../images/—Pngtree—green\ aliens\ with\ a\ gun_5435934.png);
     background-size: 140px 140px;
     background-position: -34px 0;
-    background-color: transparent;
+    background-color: white;
 }
 
 .type2 {
@@ -245,10 +244,13 @@ ol {
 }
 
 .type3 {
-    width: 50px;
+    width: 60px;
     height: 80px;
     transition: transform .5s;
-    background-color: red;
+    background-image: url(../images/—Pngtree—purple\ aliens\ with\ a\ gun_5435936.png);
+    background-size: 60px 80px;
+    border-radius: 10% 50% 0 0;
+    background-color: white;
 }
 
 h2 {
@@ -325,11 +327,11 @@ h2 {
 }
 
 #type2num7 {
-    transform: translate(-25px, 0) rotate(-90deg);
+    transform: translate(-5px, 0) rotate(-90deg);
 }
 
 #type2num8 {
-    transform: translate(90px, -245px) rotate(0deg);
+    transform: translate(100px, -245px) rotate(0deg);
 }
 
 #type2num9 {
@@ -337,7 +339,7 @@ h2 {
 }
 
 #type2num10 {
-    transform: translate(75px, 0) rotate(90deg);
+    transform: translate(65px, 0) rotate(90deg);
 }
 
 #type3num1 {
@@ -353,21 +355,25 @@ h2 {
 }
 
 #type3num4 {
-    transform: translate(0, -35px) rotate(20deg);
+    transform: translate(10px, -30px) rotate(20deg);
 }
 
 #type3num5 {
-    transform: translate(0, -35px) rotate(-20deg);
+    transform: translate(-10px, -30px) rotate(-20deg);
 }
+
 #type3num6 {
-    transform: translate(-12px, 165px) rotate(-135deg);
+    transform: translate(0px, 165px) rotate(-135deg);
 }
+
 #type3num7 {
-    transform: translate(-137px, -165px) rotate(-45deg);
+    transform: translate(-140px, -165px) rotate(-45deg);
 }
+
 #type3num8 {
-    transform: translate(65px, -165px) rotate(45deg);
+    transform: translate(60px, -165px) rotate(45deg);
 }
+
 #type3num9 {
-    transform: translate(-70px, 165px) rotate(135deg);
+    transform: translate(-80px, 165px) rotate(135deg);
 }
