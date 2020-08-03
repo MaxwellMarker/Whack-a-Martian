@@ -289,27 +289,27 @@ h2 {
 }
 
 #type2num1 {
-    transform: translate(0, 0) rotate(8deg);
+    transform: translate(-20px, 100px) rotate(8deg);
 }
 
 #type2num2 {
-    transform: translate(0, 0) rotate(-8deg);
+    transform: translate(20px, 100px) rotate(-8deg);
 }
 
 #type2num3 {
-    transform: translate(50px, -90px) rotate(35deg);
+    transform: translate(-10px, 0) rotate(35deg);
 }
 
 #type2num4 {
-    transform: translate(0, 0) rotate(8deg);
+    transform: translate(-20px, 100px) rotate(8deg);
 }
 
 #type2num5 {
-    transform: translate(0, 0) rotate(-8deg);
+    transform: translate(20px, 100px) rotate(-8deg);
 }
 
 #type2num6 {
-    transform: translate(-50px, -90px) rotate(-35deg);
+    transform: translate(10px, 0px) rotate(-35deg);
 }
 
 #type3num1 {
