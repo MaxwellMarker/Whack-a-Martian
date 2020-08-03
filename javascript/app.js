@@ -2,8 +2,8 @@ let scoreCount = 0;
 const targetIdsType1 = [
     type1num1 = {
         id: 'type1num1',
-        startPosition: 'translate(-15px, 125px) rotate(12deg)',
-        endPosition: 'translate(15px, -30px) rotate(12deg)'
+        startPosition: 'translate(-15px, 125px) rotate(15deg)',
+        endPosition: 'translate(15px, -30px) rotate(15deg)'
     },
     type1num2 = {
         id: 'type1num2',
@@ -17,8 +17,8 @@ const targetIdsType1 = [
     },
     type1num4 = {
         id: 'type1num4',
-        startPosition: 'translate(15px, 125px) rotate(-12deg)',
-        endPosition: 'translate(-15px, -30px) rotate(-12deg)'
+        startPosition: 'translate(15px, 125px) rotate(-15deg)',
+        endPosition: 'translate(-15px, -30px) rotate(-15deg)'
     },
     type1num5 = {
         id: 'type1num5',
