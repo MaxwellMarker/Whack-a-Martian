@@ -1,16 +1,19 @@
 body{
     margin: 0 auto;
-    background-color: rgb(150, 150, 150);
+    background-color: black;
     font-family: Arial, Helvetica, sans-serif;
 }
 button {
     outline: none;
+    border: none;
 }
 .fullScreen {
     display: flex;
     justify-content: center;
-    border: solid 1px red;
+    border: solid 5px rgb(255, 0, 0);
     overflow: auto;
+    border-radius: 40px;
+    background-color: rgb(150,150,150);
 }
 #buttonContainer {
     display: flex;
@@ -20,7 +23,6 @@ button {
     margin: 20px 0;
     width: 175px;
     min-width: 175px;
-    border: solid 1px red;
 }
 .sideContainer {
     width: 150px;
@@ -40,9 +42,9 @@ button {
     transition: .5s;
 }
 .sideButton:active {
-    height: 140px;
-    width: 140px;
-    font-size: 28px;
+    height: 135px;
+    width: 135px;
+    font-size: 27px;
 }
 #startButton {
     color: rgb(255, 157, 157);
@@ -67,7 +69,6 @@ button {
 #leaderboardContainer{
     margin: 25px 0;
     width: 200px;
-    border: solid 1px red;
 }
 ol {
     font-size: 10px;
@@ -88,9 +89,35 @@ ol {
     overflow: hidden;
     position: relative;
 }
+#planetContainer{
+    position: absolute;
+    background-image: linear-gradient(red,blue,green);
+    z-index: 3;
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: -250px;
+    left: 25%;
+    animation-name: spin;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: reverse;
+    animation-duration: 20s;
+}
+#planet {
+    background-color: grey;
+    width: 350px;
+    height: 350px;
+    z-index: 4;
+    border-radius: 50%;
+    background-image: linear-gradient(red,blue,green);
+}
 #backgroundSpace {
     position: absolute;
-    height: 500px;
+    height: 530px;
     width: 100%;
     border-bottom-left-radius: 50% 50%;
     border-bottom-right-radius: 50% 50%;
@@ -104,7 +131,8 @@ ol {
     right: -200px;
     width: 1400px;
     height: 1400px;
-    background-image: linear-gradient(black,rgb(51, 2, 51),black,rgb(5, 5, 80),black,rgb(61, 6, 6),black);
+    background-image: url(../images/space.jpg);
+    background-size: 1400px 1400px;
     animation-name: spin;
     animation-timing-function: linear;
     animation-iteration-count: infinite;
@@ -115,6 +143,10 @@ ol {
     0% {transform: rotate(0deg)}
     100% {transform: rotate(360deg)}
 }
+@keyframes reverse-spin {
+    0% {transform: rotate(0deg)}
+    100% {transform: rotate(-360deg)}
+}
 .row {
     position: absolute;
     background-color: rgb(226, 226, 226);
@@ -123,7 +155,7 @@ ol {
     display: flex;
     justify-content: space-around;
     align-items: flex-end;
-    background-color: rgb(180, 180, 180);
+    background-image: radial-gradient(rgb(0, 128, 64) 40%,rgb(179, 255, 0),black);
     height: 600px;
     overflow: hidden;
     width: 100%;
@@ -137,7 +169,7 @@ ol {
     bottom: 0;
     width: 100%;
     height: 50%;
-    background-color: rgb(220, 220, 220);
+    background-image: radial-gradient(orange 50%,red);
     z-index: 0;
     box-shadow: 0 0 20px 5px black inset;
 }
@@ -148,16 +180,23 @@ ol {
     color: black;
 }
 .type1 {
-    width: 80px;
+    width: 95px;
     height: 120px;
+    border-radius: 50% 50% 0 0;
     transition: transform .6s;
-    background-image: linear-gradient(green,rgb(0, 78, 0))
+    background-image: url(../images/—Pngtree—green\ aliens\ with\ a\ gun_5435934.png);
+    background-size: 140px 140px;
+    background-position: -34px 0;
+    background-color: transparent;
 }
 .type2 {
-    width: 60px;
+    width: 80px;
     height: 100px;
     transition: transform .6s;
-    background-color: orange;
+    background-image: url(../images/—Pngtree—pink\ aliens\ with\ a\ gun_5435935.png);
+    background-size: 120px 120px;
+    background-position: -25px -5px;
+    background-color: transparent;
 }
 .type3 {
     width: 50px;
@@ -165,20 +204,47 @@ ol {
     transition: transform .6s;
     background-color: red;
 }
-#r1t1 {
-    transform: translate(0, 125px);
+#type1num1 {
+    transform: translate(-15px, 125px) rotate(12deg);
 }
-#r1t2 {
-    transform: translate(0, 125px);
+#type1num2 {
+    transform: translate(-10px, 125px) rotate(3deg);
 }
-#r1t3 {
-    transform: translate(50px, 125px) rotate(-20deg);
+#type1num3 {
+    transform: translate(10px, 125px) rotate(-3deg);
 }
-#r2t1 {
-    transform: translate(0, 125px);
+#type1num4 {
+    transform: translate(15px, 125px) rotate(-12deg);
 }
-#r2t2 {
-    transform: translate(50px, 125px) rotate(-20deg);
+#type1num5 {
+    transform: translate(-50px, 125px) rotate(25deg);
+}
+#type1num6 {
+    transform: translate(0, 125px) rotate(1deg);
+}
+#type1num7 {
+    transform: translate(0, 125px) rotate(-1deg);
+}
+#type1num8 {
+    transform: translate(25px, 125px) rotate(-25deg);
+}
+#type2num1 {
+    transform: translate(0, 0) rotate(8deg);
+}
+#type2num2 {
+    transform: translate(0, 0) rotate(-8deg);
+}
+#type2num3 {
+    transform: translate(50px, -90px) rotate(35deg);
+}
+#type2num4 {
+    transform: translate(0, 0) rotate(8deg);
+}
+#type2num5 {
+    transform: translate(0, 0) rotate(-8deg);
+}
+#type2num6 {
+    transform: translate(-50px, -90px) rotate(-35deg);
 }
 h2 {
     margin: 5px;
@@ -194,5 +260,4 @@ h2 {
     width: 100%;
     bottom: 0px;
     z-index: 1;
-    border: solid 1px red;
 }
