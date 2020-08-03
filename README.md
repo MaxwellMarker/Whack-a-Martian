@@ -1,1 +1,1 @@
-# Whackem-JS-game
+# Whack-a-Martian
