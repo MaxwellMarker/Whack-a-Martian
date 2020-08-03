@@ -1,5 +1,5 @@
 let scoreCount = 0;
-const targetIdsType1 = [
+const targetIdsType1Row1 = [
     type1num1 = {
         id: 'type1num1',
         startPosition: 'translate(-15px, 125px) rotate(15deg)',
@@ -23,7 +23,9 @@ const targetIdsType1 = [
         startPosition: 'translate(15px, 125px) rotate(-15deg)',
         endPosition: 'translate(-15px, -30px) rotate(-15deg)',
         pointValue: 1
-    },
+    }
+];
+const targetIdsType1Row2 = [
     type1num5 = {
         id: 'type1num5',
         startPosition: 'translate(-50px, 125px) rotate(25deg)',
@@ -49,7 +51,7 @@ const targetIdsType1 = [
         pointValue: 1
     }
 ];
-const targetIdsType2 = [
+const targetIdsType2Row1 = [
     type2num1 = {
         id: 'type2num1',
         startPosition: 'translate(-20px, 100px) rotate(8deg)',
@@ -61,7 +63,9 @@ const targetIdsType2 = [
         startPosition: 'translate(20px, 100px) rotate(-8deg)',
         endPosition: 'translate(0, 0) rotate(-8deg)',
         pointValue: 2
-    },
+    }
+];
+const targetIdsType2Row2 = [
     type2num3 = {
         id: 'type2num3',
         startPosition: 'translate(-10px, 0) rotate(35deg)',
@@ -86,7 +90,41 @@ const targetIdsType2 = [
         endPosition: 'translate(-50px, -90px) rotate(-35deg)',
         pointValue: 2
     }
-]
+];
+const targetIdstype3Row1 = [
+    type3num1 = {
+        id: 'type3num1',
+        startPosition: 'translate(-10px, 0) rotate(25deg)',
+        endPosition: 'translate(25px, -75px) rotate(25deg)',
+        pointValue: 3
+    },
+    type3num2 = {
+        id: 'type3num2',
+        startPosition: 'translate(0, 85px) rotate(0deg)',
+        endPosition: 'translate(0, 0) rotate(0deg)',
+        pointValue: 3
+    },
+    type3num3 = {
+        id: 'type3num3',
+        startPosition: 'translate(10px, 0) rotate(-25deg)',
+        endPosition: 'translate(-25px, -75px) rotate(-25deg)',
+        pointValue: 3
+    }
+];
+const targetIdstype3Row2 = [
+    type3num4 = {
+        id: 'type3num4',
+        startPosition: 'translate(0, 0) rotate(0deg)',
+        endPosition: 'translate(0, 0) rotate(0deg)',
+        pointValue: 3
+    },
+    type3num5 = {
+        id: 'type3num5',
+        startPosition: 'translate(0, 0) rotate(0deg)',
+        endPosition: 'translate(0, 0) rotate(0deg)',
+        pointValue: 3
+    }
+];
 $(() => {
     const clickTarget = (event) => {
         const targ = $(event.currentTarget);
@@ -95,21 +133,38 @@ $(() => {
         targ.css('transform', window[ident].startPosition);
         scoreCount += window[ident].pointValue;
         $('#scoreCount').text(scoreCount);
-        setTimeout(function () {
-            targ.on('click', clickTarget);
-        }, 600);
+        // setTimeout(function () {
+        //     targ.on('click', clickTarget);
+        // }, 600);
     }
-    const $clickTarget = () => {
-        $('.target').on('click', clickTarget)
+    // const $clickTarget = () => {
+    //     $('.target').on('click', clickTarget)
+    // }
+    // $clickTarget()
+    const revealTarget = (targetArray, timeout) => {
+        const targetToReveal = targetArray[(Math.floor(Math.random() * targetArray.length))];
+        $(targetToReveal).on('click', clickTarget);
+        $(`#${targetToReveal.id}`).css('transform', targetToReveal.endPosition)
+        setTimeout(() => {
+            $(`#${targetToReveal.id}`).css('transform', targetToReveal.startPosition)
+        }, timeout);
     }
-    $clickTarget()
+    const startRound = () => {
+        setInterval(function () {
+            revealTarget(targetIdsType1Row1, 2000);
+        }, 3000);
+        setInterval(function () {
+            revealTarget(targetIdsType1Row2, 2000);
+        }, 4000);
+        setInterval(function () {
+            revealTarget(targetIdsType2Row1, 1000);
+        }, 5000);
+        setInterval(function () {
+            revealTarget(targetIdsType2Row2, 1000);
+        }, 2000);
+    }
+    const $startButtonListener = () => {
+        $('#startButton').on('click', startRound);
+    }
+    $startButtonListener();
 })
-const revealTarget = (targetArray, timeout) => {
-    const target = targetArray[(Math.floor(Math.random() * targetArray.length))];
-    $(`#${target.id}`).css('transform', target.endPosition)
-    setTimeout(() => {
-        $(`#${target.id}`).css('transform', target.startPosition)
-    }, timeout);
-}
-setInterval(function(){revealTarget(targetIdsType1, 1600);}, 3000);
-setInterval(function(){revealTarget(targetIdsType2, 1000);}, 4000);

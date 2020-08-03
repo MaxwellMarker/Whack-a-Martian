@@ -13,12 +13,19 @@
 
 <body>
     <div class="fullScreen">
-        <div id="leftContainer">
-            <div class="buttonContainer">
-                <button class="sideButton" id="startButton">LAUNCH</button>
+        <div id="leftSideArea">
+            <div id="titleDisplay">
+                <h1 class="titleWords">Whack</h1>
+                <h1 class="titleWords">-A-</h1>
+                <h1 class="titleWords">Martian</h1>
             </div>
-            <div class="buttonContainer">
-                <button class="sideButton" id="infoButton">INFO</button>
+            <div id="leftButtonArea">
+                <div class="buttonContainer">
+                    <button class="sideButton" id="startButton">LAUNCH</button>
+                </div>
+                <div class="buttonContainer">
+                    <button class="sideButton" id="infoButton">INFO</button>
+                </div>
             </div>
         </div>
         <div class="gameWindow">
@@ -36,7 +43,7 @@
             <div id="backgroundSpace">
                 <div id="background"></div>
 
-                <div class="row" id="row3">
+                <div class="row" id="row2">
                     <button class="target type2" id="type2num3"></button>
                     <button class="target type1" id="type1num5"></button>
                     <button class="target type3" id="type3num4"></button>
@@ -49,7 +56,7 @@
                     <button class="target type2" id="type2num6"></button>
                 </div>
             </div>
-            <div class="row" id="row2">
+            <div class="row" id="row1">
                 <button class="target type3" id="type3num1"></button>
                 <button class="target type1" id="type1num1"></button>
                 <button class="target type2" id="type2num1"></button>
@@ -60,7 +67,7 @@
                 <button class="target type1" id="type1num4"></button>
                 <button class="target type3" id="type3num3"></button>
             </div>
-            <div class="row" id="row1">
+            <div class="row" id="frontDisplay">
                 <h2 id="scoreDisplay">SCORE: <span id="scoreCount">0</span></h2>
             </div>
         </div>
