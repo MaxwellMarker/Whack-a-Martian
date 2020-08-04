@@ -121,13 +121,25 @@ button:hover {
 
 /* styling for leaderboard on the right */
 #leaderboardContainer {
-    margin: 10px 0;
+    margin: 10px 5px;
     width: 175px;
+    background-color: rgb(21, 32, 16);
+    border-radius: 10px;
+    border-bottom: solid 5px rgb(179, 179, 179);
+    border-top: solid 5px rgb(114, 114, 114);
+    border-left: solid 5px rgb(90, 90, 90);
+    border-right: solid 5px rgb(199, 199, 199);
 }
-
-ol {
-    font-size: 10px;
-    padding-left: 25px;
+#leaderBoard {
+    padding-left: 20px;
+}
+#lbName {
+    color: chartreuse;
+    text-align: center;
+}
+.leaders {
+    font-size: 15px;
+    color: chartreuse;
 }
 
 /* styling related to game window and everthing inside it */
@@ -159,7 +171,8 @@ ol {
     display: flex;
     justify-content: center;
     align-items: center;
-    top: -325px;
+    transition: 10s;
+    top: -700px;
     left: 200px;
     animation-name: spin;
     animation-timing-function: linear;

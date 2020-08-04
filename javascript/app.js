@@ -264,6 +264,7 @@ $(() => {
         }, 2500);
 
         setTimeout(() => {
+            $('#planetContainer').css('top', '-275px');
             setInterval(function () {
                 revealTarget(targetIdsType2Row1, 1750);
             }, 5000);
