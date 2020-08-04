@@ -201,7 +201,7 @@ button:hover {
     width: 100%;
     border-bottom-left-radius: 50% 50%;
     border-bottom-right-radius: 50% 50%;
-    background-color: white;
+    background-color: black;
     z-index: 2;
     overflow: hidden;
 }
@@ -253,7 +253,7 @@ button:hover {
     display: flex;
     justify-content: space-around;
     align-items: flex-end;
-    background-image: radial-gradient(rgb(0, 128, 64) 40%, rgb(179, 255, 0), black);
+    background-image: url(../images/secondRow.jpg);
     height: 650px;
     overflow: hidden;
     width: 100%;
@@ -262,6 +262,87 @@ button:hover {
     top: 0;
     z-index: 1;
     box-shadow: 0 0 20px 5px black inset;
+}
+.decorativeButton {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: solid 3px rgb(60,60,60);
+    box-shadow: 2px 4px 10px 0 rgba(0, 0, 0, .7);
+}
+#decoButt1 {
+    background-color: rgb(66, 5, 5);
+    bottom: 150px;
+    left: 60px;
+    animation-name: redBlink;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-delay: 2s;
+}
+#decoButt2 {
+    background-color: rgb(105, 112, 0);
+    bottom: 105px;
+    left: 145px;
+    animation-name: yellowBlink;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-delay: 1s;
+}
+#decoButt3 {
+    background-color: rgb(6, 49, 35);
+    bottom: 75px;
+    left: 240px;
+    animation-name: greenBlink;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+}
+#decoButt4 {
+    background-color: rgb(6, 49, 35);
+    bottom: 75px;
+    right: 240px;
+    animation-name: greenBlink;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+}
+#decoButt5 {
+    background-color: rgb(105, 112, 0);
+    bottom: 105px;
+    right: 145px;
+    animation-name: yellowBlink;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-delay: 1s;
+}
+#decoButt6 {
+    background-color: rgb(66, 5, 5);
+    bottom: 150px;
+    right: 60px;
+    animation-name: redBlink;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-delay: 2s;
+}
+@keyframes greenBlink {
+    0% {background-color: rgb(6, 49, 35)}
+    25% {background-color: rgb(6, 49, 35)}
+    50% {background-color: rgb(0, 255, 106)}
+    75% {background-color: rgb(6, 49, 35)}
+    100% {background-color: rgb(6, 49, 35)}
+}
+@keyframes yellowBlink {
+    0% {background-color: rgb(105, 112, 0)}
+    25% {background-color: rgb(105, 112, 0)}
+    50% {background-color: rgb(251, 255, 0)}
+    75% {background-color: rgb(105, 112, 0)}
+    100% {background-color: rgb(105, 112, 0)}
+}
+@keyframes redBlink {
+    0% {background-color: rgb(66, 5, 5)}
+    25% {background-color: rgb(66, 5, 5)}
+    50% {background-color: rgb(255, 0, 0)}
+    75% {background-color: rgb(66, 5, 5)}
+    100% {background-color: rgb(66, 5, 5)}
 }
 
 #frontDisplay {
