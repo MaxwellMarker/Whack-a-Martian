@@ -198,7 +198,6 @@ $(() => {
         }, timeout);
     }
     const startRound = () => {
-        gameTimer = 100;
         $('#startButton').off('click', startRound);
         $('.titleWords').text(' ');
         setTimeout(() => {
@@ -245,38 +244,72 @@ $(() => {
             $('.titleWords').text('');
             $('.titleWords').css('font-size', '70px');
         }, 6000);
+        
         setTimeout(() => {
+            gameTimer = 100;
             setInterval(() => {
                 $('#lineTwo').text(`${gameTimer}`);
                 gameTimer--;
             }, 1000);
         }, 5000);
+
         setInterval(function () {
             revealTarget(targetIdsType1Row1, 2000);
         }, 5000);
+
         setTimeout(() => {
             setInterval(function () {
                 revealTarget(targetIdsType1Row2, 2000);
-            }, 5000); 
+            }, 5000);
         }, 2500);
-        setInterval(function () {
-            revealTarget(targetIdsType2Row1, 1000);
-        }, 5000);
-        setInterval(function () {
-            revealTarget(targetIdsType2Row2, 1000);
-        }, 2000);
-        setInterval(function () {
-            revealTarget(targetIdsType3Row1, 1000);
-        }, 2000);
-        setInterval(function () {
-            revealTarget(targetIdsType3Row2, 1000);
-        }, 2000);
-        setInterval(function () {
-            revealTarget(targetIdsType2Planet, 1000);
-        }, 2000);
-        setInterval(function () {
-            revealTarget(targetIdsType3Planet, 1000);
-        }, 2000);
+
+        setTimeout(() => {
+            setInterval(function () {
+                revealTarget(targetIdsType2Row1, 1750);
+            }, 5000);
+        }, 8750);
+
+        setTimeout(() => {
+            setInterval(function () {
+                revealTarget(targetIdsType2Row2, 1750);
+            }, 5000);
+        }, 11250);
+
+        setTimeout(() => {
+            setInterval(function () {
+                revealTarget(targetIdsType2Planet, 3000);
+            }, 5000);
+        }, 13750);
+        
+        setTimeout(() => {
+            setInterval(function () {
+                revealTarget(targetIdsType3Row1, 1500);
+            }, 5000);
+        }, 20000);
+
+        setTimeout(() => {
+            setInterval(function () {
+                revealTarget(targetIdsType3Row2, 1500);
+            }, 5000);
+        }, 22500);
+
+        setTimeout(() => {
+            setInterval(function () {
+                revealTarget(targetIdsType3Planet, 3000);
+            }, 5000);
+        }, 27500);
+
+        setTimeout(() => {
+            setInterval(function () {
+                revealTarget(targetIdsType1Row2, 2000);
+            }, 5000);
+        }, 30000);
+
+        setTimeout(() => {
+            setInterval(function () {
+                revealTarget(targetIdsType1Row1, 2000);
+            }, 5000);
+        }, 32500);
     }
     const $startButtonListener = () => {
         $('#startButton').on('click', startRound);

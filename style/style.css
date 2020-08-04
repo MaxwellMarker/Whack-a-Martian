@@ -165,7 +165,7 @@ ol {
     animation-timing-function: linear;
     animation-iteration-count: infinite;
     animation-direction: reverse;
-    animation-duration: 20s;
+    animation-duration: 10s;
 }
 
 #planet {
@@ -177,7 +177,7 @@ ol {
     height: 400px;
     z-index: 4;
     border-radius: 50%;
-    /* background-image: linear-gradient(red, blue, green); */
+    background-image: linear-gradient(red, blue, green);
     background-color: black;
 }
 
@@ -271,7 +271,7 @@ ol {
     width: 95px;
     height: 120px;
     border-radius: 50% 50% 0 0;
-    transition: transform .6s;
+    transition: transform 1s;
     background-image: url(../images/—Pngtree—green\ aliens\ with\ a\ gun_5435934.png);
     background-size: 140px 140px;
     background-position: -34px 0;
@@ -282,7 +282,7 @@ ol {
 .type2 {
     width: 80px;
     height: 100px;
-    transition: transform .5s;
+    transition: transform 1s;
     background-image: url(../images/—Pngtree—pink\ aliens\ with\ a\ gun_5435935.png);
     background-size: 120px 120px;
     background-position: -24px -5px;
@@ -294,7 +294,7 @@ ol {
 .type3 {
     width: 60px;
     height: 80px;
-    transition: transform .5s;
+    transition: transform 1s;
     background-image: url(../images/—Pngtree—purple\ aliens\ with\ a\ gun_5435936.png);
     background-size: 60px 80px;
     border-radius: 10% 50% 0 0;
