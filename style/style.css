@@ -1,7 +1,11 @@
 /* defaults */
+@font-face {
+    src: url(../fonts/digital-7.ttf);
+    font-family: digital;
+}
 body {
     background-color: black;
-    font-family: Arial;
+    font-family: digital;
     border: none;
 }
 
@@ -49,6 +53,7 @@ button:hover {
 
 .titleWords {
     color: chartreuse;
+    font-size: 40px;
     margin: 0 auto;
 }
 
@@ -75,6 +80,7 @@ button:hover {
 
 .sideButton {
     font-size: 25px;
+    font-family: Arial;
     height: 125px;
     width: 125px;
     border-radius: 50%;
@@ -254,6 +260,7 @@ ol {
 
 #scoreDisplay {
     position: absolute;
+    font-size: 30px;
     left: 5px;
     bottom: 5px;
     color: black;

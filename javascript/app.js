@@ -1,4 +1,5 @@
 let scoreCount = 0;
+let gameTimer = 0;
 const targetIdsType1Row1 = [
     type1num1 = {
         id: 'type1num1',
@@ -91,6 +92,32 @@ const targetIdsType2Row2 = [
         pointValue: 2
     }
 ];
+const targetIdsType2Planet = [
+    type2num7 = {
+        id: 'type2num7',
+        startPosition: 'translate(0, 0) rotate(0deg)',
+        endPosition: 'translate(0, 0) rotate(0deg)',
+        pointValue: 3
+    },
+    type2num8 = {
+        id: 'type2num8',
+        startPosition: 'translate(0, 0) rotate(0deg)',
+        endPosition: 'translate(0, 0) rotate(0deg)',
+        pointValue: 3
+    },
+    type2num9 = {
+        id: 'type2num9',
+        startPosition: 'translate(0, 0) rotate(0deg)',
+        endPosition: 'translate(0, 0) rotate(0deg)',
+        pointValue: 3
+    },
+    type2num10 = {
+        id: 'type2num10',
+        startPosition: 'translate(0, 0) rotate(0deg)',
+        endPosition: 'translate(0, 0) rotate(0deg)',
+        pointValue: 3
+    }
+];
 const targetIdstype3Row1 = [
     type3num1 = {
         id: 'type3num1',
@@ -131,6 +158,7 @@ $(() => {
         const ident = targ.attr('id');
         targ.off('click', clickTarget);
         targ.css('transform', window[ident].startPosition);
+        console.log(window[ident].pointValue)
         scoreCount += window[ident].pointValue;
         $('#scoreCount').text(scoreCount);
         // setTimeout(function () {
@@ -143,19 +171,75 @@ $(() => {
     // $clickTarget()
     const revealTarget = (targetArray, timeout) => {
         const targetToReveal = targetArray[(Math.floor(Math.random() * targetArray.length))];
-        $(targetToReveal).on('click', clickTarget);
+        $(`#${targetToReveal.id}`).on('click', clickTarget);
         $(`#${targetToReveal.id}`).css('transform', targetToReveal.endPosition)
         setTimeout(() => {
             $(`#${targetToReveal.id}`).css('transform', targetToReveal.startPosition)
+            $(`#${targetToReveal.id}`).off('click', clickTarget);
         }, timeout);
     }
     const startRound = () => {
+        gameTimer = 100;
+        
+        $('.titleWords').text(' ');
+        setTimeout(() => {
+            $('#lineTwo').text('3');
+            $('#lineTwo').css('font-size', '70px');
+        }, 1000);
+        setTimeout(() => {
+            $('#lineTwo').text('2');
+        }, 2000);
+        setTimeout(() => {
+            $('#lineTwo').text('1');
+        }, 3000);
+        setTimeout(() => {
+            $('#lineTwo').css('font-size', '40px');
+            $('#lineOne').text('0');
+            $('#lineTwo').text('0');
+            $('#lineThree').text('0');
+        }, 4000);
+        setTimeout(() => {
+            $('#lineOne').text('00');
+            $('#lineTwo').text('00');
+            $('#lineThree').text('00');
+        }, 4250);
+        setTimeout(() => {
+            $('#lineOne').text('000');
+            $('#lineTwo').text('000');
+            $('#lineThree').text('000');
+        }, 4500);
+        setTimeout(() => {
+            $('#lineOne').text('0000');
+            $('#lineTwo').text('0000');
+            $('#lineThree').text('0000');
+        }, 4750);
+        setTimeout(() => {
+            $('#lineOne').text('WHACK');
+        }, 5000);
+        setTimeout(() => {
+            $('#lineTwo').text('-A-');
+        }, 5250);
+        setTimeout(() => {
+            $('#lineThree').text('MARTIAN');
+        }, 5500);
+        setTimeout(() => {
+            $('.titleWords').text('');
+            $('.titleWords').css('font-size', '70px');
+        }, 6000);
+        setTimeout(() => {
+            setInterval(() => {
+                $('#lineTwo').text(`${gameTimer}`);
+                gameTimer--;
+            }, 1000);
+        }, 5000);
         setInterval(function () {
             revealTarget(targetIdsType1Row1, 2000);
-        }, 3000);
-        setInterval(function () {
-            revealTarget(targetIdsType1Row2, 2000);
-        }, 4000);
+        }, 5000);
+        setTimeout(() => {
+            setInterval(function () {
+                revealTarget(targetIdsType1Row2, 2000);
+            }, 5000); 
+        }, 2500);
         setInterval(function () {
             revealTarget(targetIdsType2Row1, 1000);
         }, 5000);
