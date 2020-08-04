@@ -165,7 +165,7 @@ ol {
     animation-timing-function: linear;
     animation-iteration-count: infinite;
     animation-direction: reverse;
-    animation-duration: 10s;
+    animation-duration: 15s;
 }
 
 #planet {
@@ -177,7 +177,8 @@ ol {
     height: 400px;
     z-index: 4;
     border-radius: 50%;
-    background-image: linear-gradient(red, blue, green);
+    background-image: url(../images/earthdark.jpg);
+    background-size: 402px 402px;
     background-color: black;
 }
 
