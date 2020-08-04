@@ -150,7 +150,8 @@ ol {
 
 #planetContainer {
     position: absolute;
-    background-image: linear-gradient(red, blue, green);
+    /* background-image: linear-gradient(red, blue, green); */
+    background-color: transparent;
     z-index: 3;
     width: 600px;
     height: 600px;
@@ -274,7 +275,7 @@ ol {
     background-image: url(../images/—Pngtree—green\ aliens\ with\ a\ gun_5435934.png);
     background-size: 140px 140px;
     background-position: -34px 0;
-    background-color: white;
+    background-color: transparent;
     z-index: 3;
 }
 
@@ -286,7 +287,7 @@ ol {
     background-size: 120px 120px;
     background-position: -24px -5px;
     border-radius: 40% 30% 0 0;
-    background-color: white;
+    background-color: transparent;
     z-index: 3;
 }
 
@@ -297,7 +298,7 @@ ol {
     background-image: url(../images/—Pngtree—purple\ aliens\ with\ a\ gun_5435936.png);
     background-size: 60px 80px;
     border-radius: 10% 50% 0 0;
-    background-color: white;
+    background-color: transparent;
     z-index: 3;
 }
 
@@ -365,53 +366,53 @@ h2 {
 }
 
 #type2num7 {
-    transform: translate(-5px, 0) rotate(-90deg);
+    transform: translate(100px, 0) rotate(-90deg);
 }
 
 #type2num8 {
-    transform: translate(100px, -245px) rotate(0deg);
+    transform: translate(100px, -140px) rotate(0deg);
 }
 
 #type2num9 {
-    transform: translate(-40px, 245px) rotate(180deg);
+    transform: translate(-40px, 105px) rotate(180deg);
 }
 
 #type2num10 {
-    transform: translate(65px, 0) rotate(90deg);
+    transform: translate(-40px, 0) rotate(90deg);
 }
 
 #type3num1 {
-    transform: translate(25px, -75px) rotate(25deg);
+    transform: translate(-10px, 0) rotate(25deg);
 }
 
 #type3num2 {
-    transform: translate(0, 0) rotate(0deg);
+    transform: translate(0, 85px) rotate(0deg);
 }
 
 #type3num3 {
-    transform: translate(-25px, -75px) rotate(-25deg);
+    transform: translate(10px, 0) rotate(-25deg);
 }
 
 #type3num4 {
-    transform: translate(10px, -30px) rotate(20deg);
+    transform: translate(-15px, 50px) rotate(20deg);
 }
 
 #type3num5 {
-    transform: translate(-10px, -30px) rotate(-20deg);
+    transform: translate(15px, 50px) rotate(-20deg);
 }
 
 #type3num6 {
-    transform: translate(0px, 165px) rotate(-135deg);
+    transform: translate(60px, 105px) rotate(-135deg);
 }
 
 #type3num7 {
-    transform: translate(-140px, -165px) rotate(-45deg);
+    transform: translate(-80px, -105px) rotate(-45deg);
 }
 
 #type3num8 {
-    transform: translate(60px, -165px) rotate(45deg);
+    transform: translate(0px, -105px) rotate(45deg);
 }
 
 #type3num9 {
-    transform: translate(-80px, 165px) rotate(135deg);
+    transform: translate(-140px, 105px) rotate(135deg);
 }

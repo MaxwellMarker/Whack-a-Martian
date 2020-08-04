@@ -95,30 +95,30 @@ const targetIdsType2Row2 = [
 const targetIdsType2Planet = [
     type2num7 = {
         id: 'type2num7',
-        startPosition: 'translate(0, 0) rotate(0deg)',
-        endPosition: 'translate(0, 0) rotate(0deg)',
+        startPosition: 'translate(100px, 0) rotate(-90deg)',
+        endPosition: 'translate(-5px, 0) rotate(-90deg)',
         pointValue: 3
     },
     type2num8 = {
         id: 'type2num8',
-        startPosition: 'translate(0, 0) rotate(0deg)',
-        endPosition: 'translate(0, 0) rotate(0deg)',
+        startPosition: 'translate(100px, -140px) rotate(0deg)',
+        endPosition: 'translate(100px, -245px) rotate(0deg)',
         pointValue: 3
     },
     type2num9 = {
         id: 'type2num9',
-        startPosition: 'translate(0, 0) rotate(0deg)',
-        endPosition: 'translate(0, 0) rotate(0deg)',
+        startPosition: 'translate(-40px, 105px) rotate(180deg)',
+        endPosition: 'translate(-40px, 245px) rotate(180deg)',
         pointValue: 3
     },
     type2num10 = {
         id: 'type2num10',
-        startPosition: 'translate(0, 0) rotate(0deg)',
-        endPosition: 'translate(0, 0) rotate(0deg)',
+        startPosition: 'translate(-40px, 0) rotate(90deg)',
+        endPosition: 'translate(65px, 0) rotate(90deg)',
         pointValue: 3
     }
 ];
-const targetIdstype3Row1 = [
+const targetIdsType3Row1 = [
     type3num1 = {
         id: 'type3num1',
         startPosition: 'translate(-10px, 0) rotate(25deg)',
@@ -138,20 +138,46 @@ const targetIdstype3Row1 = [
         pointValue: 3
     }
 ];
-const targetIdstype3Row2 = [
+const targetIdsType3Row2 = [
     type3num4 = {
         id: 'type3num4',
-        startPosition: 'translate(0, 0) rotate(0deg)',
-        endPosition: 'translate(0, 0) rotate(0deg)',
+        startPosition: 'translate(-20px, 50px) rotate(20deg)',
+        endPosition: 'translate(10px, -30px) rotate(20deg)',
         pointValue: 3
     },
     type3num5 = {
         id: 'type3num5',
-        startPosition: 'translate(0, 0) rotate(0deg)',
-        endPosition: 'translate(0, 0) rotate(0deg)',
+        startPosition: 'translate(20px, 50px) rotate(-20deg)',
+        endPosition: 'translate(-10px, -30px) rotate(-20deg)',
         pointValue: 3
     }
 ];
+const targetIdsType3Planet = [
+    type3num6 = {
+        id: 'type3num6',
+        startPosition: 'translate(60px, 105px) rotate(-135deg)',
+        endPosition: 'translate(0px, 165px) rotate(-135deg)',
+        pointValue: 5
+    },
+    type3num7 = {
+        id: 'type3num7',
+        startPosition: 'translate(-80px, -105px) rotate(-45deg)',
+        endPosition: 'translate(-140px, -165px) rotate(-45deg)',
+        pointValue: 5
+    },
+    type3num8 = {
+        id: 'type3num8',
+        startPosition: 'translate(0px, -105px) rotate(45deg)',
+        endPosition: 'translate(60px, -165px) rotate(45deg)',
+        pointValue: 5
+    },
+    type3num9 = {
+        id: 'type3num9',
+        startPosition: 'translate(-140px, 105px) rotate(135deg)',
+        endPosition: 'translate(-80px, 165px) rotate(135deg)',
+        pointValue: 5
+    }
+]
 $(() => {
     const clickTarget = (event) => {
         const targ = $(event.currentTarget);
@@ -161,14 +187,7 @@ $(() => {
         console.log(window[ident].pointValue)
         scoreCount += window[ident].pointValue;
         $('#scoreCount').text(scoreCount);
-        // setTimeout(function () {
-        //     targ.on('click', clickTarget);
-        // }, 600);
     }
-    // const $clickTarget = () => {
-    //     $('.target').on('click', clickTarget)
-    // }
-    // $clickTarget()
     const revealTarget = (targetArray, timeout) => {
         const targetToReveal = targetArray[(Math.floor(Math.random() * targetArray.length))];
         $(`#${targetToReveal.id}`).on('click', clickTarget);
@@ -180,7 +199,7 @@ $(() => {
     }
     const startRound = () => {
         gameTimer = 100;
-        
+        $('#startButton').off('click', startRound);
         $('.titleWords').text(' ');
         setTimeout(() => {
             $('#lineTwo').text('3');
@@ -245,6 +264,18 @@ $(() => {
         }, 5000);
         setInterval(function () {
             revealTarget(targetIdsType2Row2, 1000);
+        }, 2000);
+        setInterval(function () {
+            revealTarget(targetIdsType3Row1, 1000);
+        }, 2000);
+        setInterval(function () {
+            revealTarget(targetIdsType3Row2, 1000);
+        }, 2000);
+        setInterval(function () {
+            revealTarget(targetIdsType2Planet, 1000);
+        }, 2000);
+        setInterval(function () {
+            revealTarget(targetIdsType3Planet, 1000);
         }, 2000);
     }
     const $startButtonListener = () => {
