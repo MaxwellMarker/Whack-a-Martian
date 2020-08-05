@@ -1,5 +1,29 @@
 let scoreCount = 0;
 let gameTimer = 0;
+let leaderBoardObjects = [{
+        name: 'MAX',
+        score: '200'
+    },
+    {
+        name: 'PURPLEALIEN',
+        score: '160'
+    },
+    {
+        name: 'PINKY',
+        score: '120'
+    },
+    {
+        name: 'THE GREEN ONE',
+        score: '100'
+    },
+    {
+        name: 'RICHARD',
+        score: '12'
+    }
+];
+const scoreSorter = (a, b) => {
+    return b.score - a.score;
+}
 const targetIdsType1Row1 = [
     type1num1 = {
         id: 'type1num1',
@@ -179,6 +203,15 @@ const targetIdsType3Planet = [
     }
 ]
 $(() => {
+    const sortLeaderboard = () => {
+        leaderBoardObjects.sort(scoreSorter);
+        $('#leaderOne').text(`-${leaderBoardObjects[0].score}- ${leaderBoardObjects[0].name}`);
+        $('#leaderTwo').text(`-${leaderBoardObjects[1].score}- ${leaderBoardObjects[1].name}`);
+        $('#leaderThree').text(`-${leaderBoardObjects[2].score}- ${leaderBoardObjects[2].name}`);
+        $('#leaderFour').text(`-${leaderBoardObjects[3].score}- ${leaderBoardObjects[3].name}`);
+        $('#leaderFive').text(`-${leaderBoardObjects[4].score}- ${leaderBoardObjects[4].name}`);
+    }
+    sortLeaderboard();
     const clickTarget = (event) => {
         const targ = $(event.currentTarget);
         const ident = targ.attr('id');
@@ -197,6 +230,8 @@ $(() => {
         }, timeout);
     }
     const startRound = () => {
+        scoreCount = 0;
+        $('#scoreCount').text(scoreCount);
         $('#startButton').off('click', startRound);
         $('.titleWords').text(' ');
         setTimeout(() => {
@@ -243,7 +278,6 @@ $(() => {
             $('.titleWords').text('');
             $('.titleWords').css('font-size', '70px');
         }, 6000);
-        scoreCount = 0;
         let gameplay1;
         let gameplay2;
         let gameplay3;
@@ -291,7 +325,7 @@ $(() => {
                 revealTarget(targetIdsType2Planet, 3000);
             }, 5000);
         }, 13750);
-        
+
         setTimeout(() => {
             gameplay7 = setInterval(function () {
                 revealTarget(targetIdsType3Row1, 1500);
@@ -334,6 +368,20 @@ $(() => {
             clearInterval(gameplay10);
             clearInterval(gameplay11);
             $('#planetContainer').css('top', '-700px');
+            $startButtonListener();
+            $('.titleWords').css('font-size', '40px');
+            $('#lineOne').text('0000');
+            $('#lineTwo').text('0000');
+            $('#lineThree').text('0000');
+            setTimeout(() => {
+                $('#lineOne').text('WHACK');
+            }, 1000);
+            setTimeout(() => {
+                $('#lineTwo').text('-A-');
+            }, 2000);
+            setTimeout(() => {
+                $('#lineThree').text('MARTIAN');
+            }, 3000);
         }, 86500);
     }
     const $startButtonListener = () => {
