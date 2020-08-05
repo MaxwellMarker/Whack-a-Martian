@@ -17,7 +17,7 @@ let leaderBoardObjects = [{
         score: 100
     },
     {
-        name: 'RICHARD',
+        name: 'CHAD',
         score: 12
     }
 ];
@@ -324,12 +324,12 @@ $(() => {
         }, 5000);
 
         gameplay2 = setInterval(function () {
-            revealTarget(targetIdsType1Row1, 2000);
+            revealTarget(targetIdsType1Row2, 2000);
         }, 5000);
 
         setTimeout(() => {
             gameplay3 = setInterval(function () {
-                revealTarget(targetIdsType1Row2, 2000);
+                revealTarget(targetIdsType1Row1, 2000);
             }, 5000);
         }, 2500);
 
@@ -338,13 +338,13 @@ $(() => {
             gameplay4 = setInterval(function () {
                 revealTarget(targetIdsType2Row1, 1750);
             }, 5000);
-        }, 8750);
+        }, 10750);
 
         setTimeout(() => {
             gameplay5 = setInterval(function () {
                 revealTarget(targetIdsType2Row2, 1750);
             }, 5000);
-        }, 11250);
+        }, 13250);
 
         setTimeout(() => {
             gameplay6 = setInterval(function () {
@@ -356,31 +356,31 @@ $(() => {
             gameplay7 = setInterval(function () {
                 revealTarget(targetIdsType3Row1, 1500);
             }, 5000);
-        }, 20000);
+        }, 22000);
 
         setTimeout(() => {
             gameplay8 = setInterval(function () {
                 revealTarget(targetIdsType3Row2, 1500);
             }, 5000);
-        }, 22500);
+        }, 24500);
 
         setTimeout(() => {
             gameplay9 = setInterval(function () {
                 revealTarget(targetIdsType3Planet, 3000);
             }, 5000);
-        }, 27500);
+        }, 28500);
 
         setTimeout(() => {
             gameplay10 = setInterval(function () {
-                revealTarget(targetIdsType1Row2, 2000);
+                revealTarget(targetIdsType1Row1, 2000);
             }, 5000);
-        }, 30000);
+        }, 31000);
 
         setTimeout(() => {
             gameplay11 = setInterval(function () {
-                revealTarget(targetIdsType1Row1, 2000);
+                revealTarget(targetIdsType1Row2, 2000);
             }, 5000);
-        }, 32500);
+        }, 33000);
         endGame = setTimeout(() => {
             clearInterval(gameplay1);
             clearInterval(gameplay2);
