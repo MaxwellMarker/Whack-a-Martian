@@ -212,6 +212,27 @@ $(() => {
         $('#leaderFive').text(`-${leaderBoardObjects[4].score}- ${leaderBoardObjects[4].name}`);
     }
     sortLeaderboard();
+    const infoOpen = () => {
+        $('#infoBox').css('top', '0');
+        $('#infoButton').off('click', infoOpen);
+        $('#infoButton').on('click', infoClose);
+        $('#infoButton').css({
+            'background-image': 'radial-gradient(rgb(25, 36, 196), rgb(51, 50, 138))',
+            'box-shadow': '0 0 30px 0 blue',
+            'border': 'solid 5px rgb(44, 45, 112)'
+        })
+    }
+    const infoClose = () => {
+        $('#infoBox').css('top', '-420px');
+        $('#infoButton').off('click', infoClose);
+        $('#infoButton').on('click', infoOpen);
+        $('#infoButton').css({
+            'background-image': 'radial-gradient(rgb(12, 11, 83), rgb(42, 32, 179))',
+            'box-shadow': '10px 15px 15px 1px rgba(0, 0, 0, .7)',
+            'border': 'solid 5px rgb(40, 41, 99)'
+        })
+    }
+    $('#infoButton').on('click', infoOpen);
     const clickTarget = (event) => {
         const targ = $(event.currentTarget);
         const ident = targ.attr('id');
