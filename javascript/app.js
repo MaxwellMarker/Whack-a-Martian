@@ -2,23 +2,23 @@ let scoreCount = 0;
 let gameTimer = 0;
 let leaderBoardObjects = [{
         name: 'MAX',
-        score: '200'
+        score: 200
     },
     {
         name: 'PURPLEALIEN',
-        score: '160'
+        score: 160
     },
     {
         name: 'PINKY',
-        score: '120'
+        score: 120
     },
     {
         name: 'THE GREEN ONE',
-        score: '100'
+        score: 100
     },
     {
         name: 'RICHARD',
-        score: '12'
+        score: 12
     }
 ];
 const scoreSorter = (a, b) => {
@@ -373,24 +373,44 @@ $(() => {
             clearInterval(gameplay10);
             clearInterval(gameplay11);
             $('#planetContainer').css('top', '-700px');
-            $startButtonListener();
             $('.titleWords').css('font-size', '40px');
             $('#lineOne').text('0000');
             $('#lineTwo').text('0000');
             $('#lineThree').text('0000');
             setTimeout(() => {
-                $('#lineOne').text('WHACK');
+                $('#lineOne').text('ENTER');
             }, 1000);
             setTimeout(() => {
-                $('#lineTwo').text('-A-');
+                $('#lineTwo').text('NAME');
             }, 2000);
             setTimeout(() => {
-                $('#lineThree').text('MARTIAN');
-                $('#startButton').css({
-                    'background-image': 'radial-gradient(rgb(54, 13, 13), rgb(117, 43, 43))',
-                    'box-shadow': '10px 15px 15px 1px rgba(0, 0, 0, .7)',
-                    'border': 'solid 5px rgb(109, 42, 42)'
-                });
+                $('#lineThree').text('==>');
+                $('#nameEnterInput').val('YOUR NAME HERE')
+                $('#nameEnterButton').on('click', enterName = () => {
+                    const playerFinalObject = {
+                        name: `${$('#nameEnterInput').val().toUpperCase()}`,
+                        score: scoreCount
+                    };
+                    leaderBoardObjects.push(playerFinalObject);
+                    $('#startButton').css({
+                        'background-image': 'radial-gradient(rgb(54, 13, 13), rgb(117, 43, 43))',
+                        'box-shadow': '10px 15px 15px 1px rgba(0, 0, 0, .7)',
+                        'border': 'solid 5px rgb(109, 42, 42)'
+                    });
+                    sortLeaderboard();
+                    $startButtonListener();
+                    $('#nameEnterButton').off('click', enterName);
+                    $('#nameEnterInput').val('');
+                    setTimeout(() => {
+                        $('#lineOne').text('WHACK');
+                    }, 1000);
+                    setTimeout(() => {
+                        $('#lineTwo').text('-A-');
+                    }, 2000);
+                    setTimeout(() => {
+                        $('#lineThree').text('MARTIAN');
+                    }, 3000);
+                })
             }, 3000);
         }, 86500);
     }
