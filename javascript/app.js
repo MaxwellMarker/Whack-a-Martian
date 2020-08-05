@@ -231,6 +231,11 @@ $(() => {
     }
     const startRound = () => {
         scoreCount = 0;
+        $('#startButton').css({
+            'background-image': 'radial-gradient(rgb(209, 8, 8), rgb(138, 50, 50))',
+            'box-shadow': '0 0 30px 0 red',
+            'border': 'solid 4px rgb(138, 50, 50)'
+        });
         $('#scoreCount').text(scoreCount);
         $('#startButton').off('click', startRound);
         $('.titleWords').text(' ');
@@ -381,6 +386,11 @@ $(() => {
             }, 2000);
             setTimeout(() => {
                 $('#lineThree').text('MARTIAN');
+                $('#startButton').css({
+                    'background-image': 'radial-gradient(rgb(54, 13, 13), rgb(117, 43, 43))',
+                    'box-shadow': '10px 15px 15px 1px rgba(0, 0, 0, .7)',
+                    'border': 'solid 5px rgb(109, 42, 42)'
+                });
             }, 3000);
         }, 86500);
     }
