@@ -5,7 +5,7 @@ let leaderBoardObjects = [{
         score: 200
     },
     {
-        name: 'PURPLEALIEN',
+        name: 'PURPLY',
         score: 160
     },
     {
@@ -13,7 +13,7 @@ let leaderBoardObjects = [{
         score: 120
     },
     {
-        name: 'THE GREEN ONE',
+        name: 'GREENY',
         score: 100
     },
     {
