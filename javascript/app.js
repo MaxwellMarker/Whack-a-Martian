@@ -419,7 +419,6 @@ $(() => {
                         'border': 'solid 5px rgb(109, 42, 42)'
                     });
                     sortLeaderboard();
-                    $startButtonListener();
                     $('#nameEnterButton').off('click', enterName);
                     $('#nameEnterInput').val('');
                     setTimeout(() => {
@@ -430,6 +429,7 @@ $(() => {
                     }, 2000);
                     setTimeout(() => {
                         $('#lineThree').text('MARTIAN');
+                        $startButtonListener();
                     }, 3000);
                 })
             }, 3000);
