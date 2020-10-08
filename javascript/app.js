@@ -18,7 +18,7 @@ let leaderBoardObjects = [{
         score: 100
     },
     {
-        name: 'CHAD',
+        name: 'KEVIN',
         score: 12
     }
 ];
