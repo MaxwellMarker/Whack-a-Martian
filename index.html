@@ -1,122 +1,143 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style/style.css">
-    <script src="https://code.jquery.com/jquery-3.5.1.min.js"
-        integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
-    <script src="javascript/app.js" defer></script>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style/style.css" />
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.min.js"
+      integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+      crossorigin="anonymous"
+    ></script>
+    <script src="javascript/app.js" type="module" defer></script>
     <title>Whack-A-Martian</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <div class="fullScreen">
-        <div id="leftSideArea">
-            <div id="titleDisplay">
-                <h1 class="titleWords" id="lineOne">WHACK</h1>
-                <h1 class="titleWords" id="lineTwo">-A-</h1>
-                <h1 class="titleWords" id="lineThree">MARTIAN</h1>
-            </div>
-            <div id="leftButtonArea">
-                <div class="buttonContainer">
-                    <button class="sideButton" id="startButton">LAUNCH</button>
-                </div>
-                <div class="buttonContainer">
-                    <button class="sideButton" id="infoButton">INFO</button>
-                </div>
-            </div>
+      <div id="leftSideArea">
+        <div id="titleDisplay">
+          <h1 class="titleWords" id="lineOne">WHACK</h1>
+          <h1 class="titleWords" id="lineTwo">-A-</h1>
+          <h1 class="titleWords" id="lineThree">MARTIAN</h1>
         </div>
-        <div class="gameWindow">
-            <div id="infoBox">
-                <p id="theInfo">PRESSING THE LAUNCH BUTTON WILL START THE GAME. CLICK ALIENS WHEN THEY APPEAR TO GET
-                    POINTS. THE GAME WILL LAST 80 SECONDS AND THEN YOU WILL BE ASKED TO ENTER YOUR NAME. IF YOU SCORED
-                    WELL ENOUGH, YOU WILL EARN A PLACE ON THE LEADERBOARD. ALIENS HAVE DIFFERENT POINT VALUES (SEE
-                    BELOW) AND MOVING TARGETS ARE WORTH EXTRA. TO CLOSE THIS WINDOW, PRESS THE INFO BUTTON AGAIN.</p>
-                <div id="examples">
-                    <div class="exampleItem" id="greenAlienExample">1-PT</div>
-                    <div class="exampleItem" id="pinkAlienExample">2-PTS</div>
-                    <div class="exampleItem" id="purpleAlienExample">3-PTS</div>
-                </div>
-            </div>
-            <div id="planetContainer">
-                <div id="planet"></div>
-                <button class="target type2" id="type2num7"></button>
-                <button class="target type3" id="type3num6"></button>
-                <button class="target type2" id="type2num8"></button>
-                <button class="target type3" id="type3num7"></button>
-                <button class="target type2" id="type2num9"></button>
-                <button class="target type3" id="type3num8"></button>
-                <button class="target type2" id="type2num10"></button>
-                <button class="target type3" id="type3num9"></button>
-            </div>
-            <div id="backgroundSpace">
-                <div id="background"></div>
 
-                <div class="row" id="row2">
-                    <button class="target type2" id="type2num3"></button>
-                    <button class="target type1" id="type1num5"></button>
-                    <button class="target type3" id="type3num4"></button>
-                    <button class="target type2" id="type2num4"></button>
-                    <button class="target type1" id="type1num6"></button>
-                    <button class="target type1" id="type1num7"></button>
-                    <button class="target type2" id="type2num5"></button>
-                    <button class="target type3" id="type3num5"></button>
-                    <button class="target type1" id="type1num8"></button>
-                    <button class="target type2" id="type2num6"></button>
-                </div>
-            </div>
-            <div class="row" id="row1">
-                <button class="target type3" id="type3num1"></button>
-                <button class="target type1" id="type1num1"></button>
-                <button class="target type2" id="type2num1"></button>
-                <button class="target type1" id="type1num2"></button>
-                <button class="target type3" id="type3num2"></button>
-                <button class="target type1" id="type1num3"></button>
-                <button class="target type2" id="type2num2"></button>
-                <button class="target type1" id="type1num4"></button>
-                <button class="target type3" id="type3num3"></button>
-                <div class="decorativeButton" id="decoButt1"></div>
-                <div class="decorativeButton" id="decoButt2"></div>
-                <div class="decorativeButton" id="decoButt3"></div>
-                <div class="decorativeButton" id="decoButt4"></div>
-                <div class="decorativeButton" id="decoButt5"></div>
-                <div class="decorativeButton" id="decoButt6"></div>
-            </div>
-            <div class="row" id="frontDisplay"></div>
+        <div id="leftButtonArea">
+          <div class="buttonContainer">
+            <button class="sideButton" id="startButton">LAUNCH</button>
+          </div>
+
+          <div class="buttonContainer">
+            <button class="sideButton" id="infoButton">INFO</button>
+          </div>
         </div>
-        <div id="rightSideArea">
-            <div id="leaderboardContainer">
-                <h2 id="lbName">TOP WHACKS</h2>
-                <ol id="leaderBoard">
-                    <li class="leaders" id="leaderOne"></li>
-                    <li class="leaders" id="leaderTwo"></li>
-                    <li class="leaders" id="leaderThree"></li>
-                    <li class="leaders" id="leaderFour"></li>
-                    <li class="leaders" id="leaderFive"></li>
-                </ol>
-            </div>
-            <div id="scoreScreen">
-                <h2 id="scoreDisplay">SCORE: <span id="scoreCount">0</span></h2>
-            </div>
-            <input id="nameEnterInput" type="text">
-            <button id="nameEnterButton">ENTER</button>
-            <div class="vent"></div>
-            <div class="vent"></div>
-            <div class="vent"></div>
-            <div class="vent"></div>
-            <div class="vent"></div>
-            <div class="vent"></div>
-            <div class="vent"></div>
-            <div class="vent"></div>
-            <div class="vent"></div>
-            <div class="vent"></div>
-            <div class="vent"></div>
-            <div class="vent"></div>
-            <div class="vent"></div>
+      </div>
+
+      <div class="gameWindow">
+        <div id="infoBox">
+          <p id="infoText">
+            PRESSING THE LAUNCH BUTTON WILL START THE GAME. CLICK ALIENS WHEN
+            THEY APPEAR TO GET POINTS. THE GAME WILL LAST 80 SECONDS AND THEN
+            YOU WILL BE ASKED TO ENTER YOUR NAME. IF YOU SCORED WELL ENOUGH, YOU
+            WILL EARN A PLACE ON THE LEADERBOARD. ALIENS HAVE DIFFERENT POINT
+            VALUES (SEE BELOW) AND MOVING TARGETS ARE WORTH EXTRA. TO CLOSE THIS
+            WINDOW, PRESS THE INFO BUTTON AGAIN.
+          </p>
+
+          <div id="examples">
+            <div class="exampleItem" id="greenAlienExample">1-PT</div>
+            <div class="exampleItem" id="pinkAlienExample">2-PTS</div>
+            <div class="exampleItem" id="purpleAlienExample">3-PTS</div>
+          </div>
         </div>
+
+        <div id="planetContainer">
+          <div id="planet"></div>
+
+          <button class="target type2" id="type2num7"></button>
+          <button class="target type3" id="type3num6"></button>
+          <button class="target type2" id="type2num8"></button>
+          <button class="target type3" id="type3num7"></button>
+          <button class="target type2" id="type2num9"></button>
+          <button class="target type3" id="type3num8"></button>
+          <button class="target type2" id="type2num10"></button>
+          <button class="target type3" id="type3num9"></button>
+        </div>
+
+        <div id="backgroundSpace">
+          <div id="background"></div>
+
+          <div class="row" id="row2">
+            <button class="target type2" id="type2num3"></button>
+            <button class="target type1" id="type1num5"></button>
+            <button class="target type3" id="type3num4"></button>
+            <button class="target type2" id="type2num4"></button>
+            <button class="target type1" id="type1num6"></button>
+            <button class="target type1" id="type1num7"></button>
+            <button class="target type2" id="type2num5"></button>
+            <button class="target type3" id="type3num5"></button>
+            <button class="target type1" id="type1num8"></button>
+            <button class="target type2" id="type2num6"></button>
+          </div>
+        </div>
+
+        <div class="row" id="row1">
+          <button class="target type3" id="type3num1"></button>
+          <button class="target type1" id="type1num1"></button>
+          <button class="target type2" id="type2num1"></button>
+          <button class="target type1" id="type1num2"></button>
+          <button class="target type3" id="type3num2"></button>
+          <button class="target type1" id="type1num3"></button>
+          <button class="target type2" id="type2num2"></button>
+          <button class="target type1" id="type1num4"></button>
+          <button class="target type3" id="type3num3"></button>
+
+          <div class="decorativeBtn" id="decoBtn1"></div>
+          <div class="decorativeBtn" id="decoBtn2"></div>
+          <div class="decorativeBtn" id="decoBtn3"></div>
+          <div class="decorativeBtn" id="decoBtn4"></div>
+          <div class="decorativeBtn" id="decoBtn5"></div>
+          <div class="decorativeBtn" id="decoBtn6"></div>
+        </div>
+
+        <div class="row" id="frontDisplay"></div>
+      </div>
+
+      <div id="rightSideArea">
+        <div id="leaderboardContainer">
+          <h2 id="lbName">TOP WHACKS</h2>
+
+          <ol id="leaderBoard">
+            <li class="leaders" id="leaderOne"></li>
+            <li class="leaders" id="leaderTwo"></li>
+            <li class="leaders" id="leaderThree"></li>
+            <li class="leaders" id="leaderFour"></li>
+            <li class="leaders" id="leaderFive"></li>
+          </ol>
+        </div>
+
+        <div id="scoreScreen">
+          <h2 id="scoreDisplay">SCORE: <span id="scoreCount">0</span></h2>
+        </div>
+
+        <input id="nameEnterInput" type="text" autocomplete="off" />
+
+        <button id="nameEnterButton">ENTER</button>
+
+        <div class="vent"></div>
+        <div class="vent"></div>
+        <div class="vent"></div>
+        <div class="vent"></div>
+        <div class="vent"></div>
+        <div class="vent"></div>
+        <div class="vent"></div>
+        <div class="vent"></div>
+        <div class="vent"></div>
+        <div class="vent"></div>
+        <div class="vent"></div>
+        <div class="vent"></div>
+        <div class="vent"></div>
+      </div>
     </div>
-</body>
-
+  </body>
 </html>

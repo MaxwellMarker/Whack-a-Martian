@@ -3,6 +3,7 @@
     src: url(../fonts/digital-7.ttf);
     font-family: digital;
 }
+
 body {
     background-color: black;
     font-family: digital;
@@ -125,6 +126,7 @@ button:hover {
     flex-direction: column;
     align-items: center;
 }
+
 #rightSideArea > * {
     border-bottom: solid 5px rgb(179, 179, 179);
     border-top: solid 5px rgb(114, 114, 114);
@@ -135,31 +137,38 @@ button:hover {
     background-color: rgb(21, 32, 16);
     width: 150px;
 }
+
 /* leaderboard */
 #leaderboardContainer {
     margin: 10px 5px 0 5px;
     height: 200px;
 }
+
 #leaderBoard {
     padding-left: 20px;
 }
+
 #lbName {
     text-align: center;
     margin: 5px auto;
 }
+
 .leaders {
     font-size: 16px;
     margin: 15px 0;
 }
+
 /* score display screen */
 #scoreScreen {
     margin: 5px 5px;
     height: 75px;
 }
+
 #scoreDisplay {
     margin-left: 5px;
     font-size: 30px;
 }
+
 /* name input area */
 #nameEnterInput {
     height: 40px;
@@ -169,6 +178,15 @@ button:hover {
     font-size: 20px;
     font-family: digital;
 }
+
+#nameEnterInput::placeholder {
+    color: chartreuse
+}
+
+#nameEnterInput:focus::placeholder {
+  color: transparent;
+}
+
 #nameEnterButton {
     margin: 5px;
     height: 40px;
@@ -180,16 +198,19 @@ button:hover {
     color: rgb(185, 255, 185);
     transition: .5s;
 }
+
 #nameEnterButton:active {
     background-image: radial-gradient(rgb(20, 175, 0), rgb(0, 100, 0));
     box-shadow: 0 0 15px 0 rgb(72, 255, 0);
 }
+
 /* decorative vents at the bottom right */
 .vent {
     height: 10px;
     background-color: black!important;
     margin: 1.5px auto;
 }
+
 /* styling related to game window and everthing inside it */
 .gameWindow {
     display: flex;
@@ -207,6 +228,7 @@ button:hover {
     overflow: hidden;
     position: relative;
 }
+
 /* for info screen */
 #infoBox {
     position: absolute;
@@ -219,13 +241,15 @@ button:hover {
     z-index: 5;
     border-radius: 0 0 30px 30px;
 }
-#theInfo {
+
+#infoText {
     color: aqua;
     text-align: center;
     padding: 20px;
     margin: 0;
     font-size: 30px;
 }
+
 /* for alien examples at the bottom of the info screen */
 #examples {
     display: flex;
@@ -237,6 +261,7 @@ button:hover {
     justify-content: space-around;
     align-items: center;
 }
+
 .exampleItem {
     width: 100px;
     height: 100px;
@@ -246,16 +271,20 @@ button:hover {
     background-repeat: no-repeat;
     background-position: bottom;
 }
+
 #greenAlienExample {
     background-image: url(../images/—Pngtree—green\ aliens\ with\ a\ gun_5435934.png);
 }
+
 #pinkAlienExample {
     background-image: url(../images/—Pngtree—pink\ aliens\ with\ a\ gun_5435935.png);
 }
+
 #purpleAlienExample {
     background-image: url(../images/—Pngtree—purple\ aliens\ with\ a\ gun_5435936.png);
     background-size: auto 85px;
 }
+
 /* the spinning planet and the div that holds it */
 #planetContainer {
     position: absolute;
@@ -301,6 +330,7 @@ button:hover {
     z-index: 2;
     overflow: hidden;
 }
+
 /* the spinning starry background */
 #background {
     position: absolute;
@@ -327,6 +357,7 @@ button:hover {
         transform: rotate(360deg)
     }
 }
+
 /* for rows of aliens */
 .row {
     position: absolute;
@@ -359,8 +390,9 @@ button:hover {
     z-index: 1;
     box-shadow: 0 0 20px 5px black inset;
 }
+
 /* styling for decorative lights on the second row */
-.decorativeButton {
+.decorativeBtn {
     position: absolute;
     width: 30px;
     height: 30px;
@@ -370,46 +402,53 @@ button:hover {
     animation-duration: 3s;
     animation-iteration-count: infinite;
 }
-#decoButt1 {
+
+#decoBtn1 {
     background-color: rgb(66, 5, 5);
     bottom: 150px;
     left: 60px;
     animation-name: redBlink;
     animation-delay: 2s;
 }
-#decoButt2 {
+
+#decoBtn2 {
     background-color: rgb(105, 112, 0);
     bottom: 105px;
     left: 145px;
     animation-name: yellowBlink;
     animation-delay: 1s;
 }
-#decoButt3 {
+
+#decoBtn3 {
     background-color: rgb(6, 49, 35);
     bottom: 75px;
     left: 240px;
     animation-name: greenBlink;
 }
-#decoButt4 {
+
+#decoBtn4 {
     background-color: rgb(6, 49, 35);
     bottom: 75px;
     right: 240px;
     animation-name: greenBlink;
 }
-#decoButt5 {
+
+#decoBtn5 {
     background-color: rgb(105, 112, 0);
     bottom: 105px;
     right: 145px;
     animation-name: yellowBlink;
     animation-delay: 1s;
 }
-#decoButt6 {
+
+#decoBtn6 {
     background-color: rgb(66, 5, 5);
     bottom: 150px;
     right: 60px;
     animation-name: redBlink;
     animation-delay: 2s;
 }
+
 /* animations for blinking lights */
 @keyframes greenBlink {
     0% {background-color: rgb(6, 49, 35)}
@@ -418,6 +457,7 @@ button:hover {
     75% {background-color: rgb(6, 49, 35)}
     100% {background-color: rgb(6, 49, 35)}
 }
+
 @keyframes yellowBlink {
     0% {background-color: rgb(105, 112, 0)}
     25% {background-color: rgb(105, 112, 0)}
@@ -425,6 +465,7 @@ button:hover {
     75% {background-color: rgb(105, 112, 0)}
     100% {background-color: rgb(105, 112, 0)}
 }
+
 @keyframes redBlink {
     0% {background-color: rgb(66, 5, 5)}
     25% {background-color: rgb(66, 5, 5)}
@@ -432,6 +473,7 @@ button:hover {
     75% {background-color: rgb(66, 5, 5)}
     100% {background-color: rgb(66, 5, 5)}
 }
+
 /* dark grey space at bottom of game window */
 #frontDisplay {
     bottom: 0;
